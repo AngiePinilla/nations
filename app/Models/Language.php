@@ -25,7 +25,7 @@ class Language extends Model
         //2. pivot table(intermediate table)
         //3. Foreign Key Current Model
         //4. Foreign Key of relates Model
-        return $this->belongsToMany(Country::class , 'country_languages' , 'language_id' , 'country_id');
+        return $this->belongsToMany(Country::class , 'country_languages' , 'language_id' , 'country_id')->withPivot('official');
 
         
     }
